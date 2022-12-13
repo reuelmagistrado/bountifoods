@@ -1,0 +1,13 @@
+@media screen and (min-width: 40em) {
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topnav #navLinks {
+    display: inline-flex;
+  }
+  .topnav a.hamburger-btn {
+    display: none;
+  }
+}
