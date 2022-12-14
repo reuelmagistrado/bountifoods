@@ -16,8 +16,8 @@
     align-content: space-evenly;
     column-gap: 3.2rem;
     display: grid;
-    grid-template-columns: auto, 1fr;
-    grid-template-rows: repeat(2, 1fr), auto;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, 1fr) auto;
     justify-content: space-evenly;
     justify-items: center;
   }
