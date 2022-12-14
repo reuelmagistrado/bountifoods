@@ -18,10 +18,10 @@
 }
 
 .container {
-  width: 90%;
-  max-width: 1040px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  max-width: 1040px;
+  width: 90%;
 }
 
 /* Text Styles */
@@ -31,39 +31,31 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
 }
 
 h1 {
-  font-size: 4.624rem;
-}
-
-h2 {
-  font-size: 4.11rem;
-}
-
-h3 {
   font-size: 3.653rem;
 }
 
-h4 {
+h2 {
   font-size: 3.247rem;
 }
 
-h5 {
+h3 {
   font-size: 2.887rem;
 }
 
-h6 {
+h4 {
   font-size: 2.566rem;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   font-family: "Merriweather", serif;
+  margin: 0;
 }
 
 p,
@@ -74,9 +66,15 @@ li {
   font-size: 1.802rem;
 }
 
+small,
+small a {
+  font-size: 1.125rem;
+}
+
 /* Navigation */
 .nav-section {
-  background-color: #d4d8f0;
+  /* background-color: #d4d8f0; */
+  border: 2px solid var(--color-accent1);
 }
 
 .topnav {
@@ -84,21 +82,95 @@ li {
   position: relative;
 }
 
-.topnav #navLinks {
+.navLinks {
   display: none;
 }
 
-.topnav a {
-  color: #232946;
-  padding: 1.2rem 1.4rem;
-  text-decoration: none;
-  font-size: 2.5rem;
+.showHide {
   display: block;
 }
 
-.topnav a.hamburger-btn {
+.topnav a,
+.topnav button {
+  color: var(--color-accent1);
+  display: block;
+  font-size: 2.5rem;
+  padding: 1.2rem 1.4rem;
+  text-decoration: none;
+}
+
+.topnav .hamburger-btn {
+  background: transparent;
+  border: none;
   display: block;
   position: absolute;
   right: 0;
   top: 0;
+}
+
+/* Footer */
+.footer-section {
+  background: var(--color-accent1);
+  color: var(--color-primary);
+  padding-top: 3.2rem;
+  padding-bottom: 2.4rem;
+}
+
+.footer__logo-container,
+.footer_dept-container,
+.officehours-container {
+  margin-bottom: 3.2rem;
+}
+
+footer h3 {
+  font-size: 2.027rem;
+}
+
+.base-footer {
+  border-top: 1px solid var(--color-secondary);
+  margin-top: 6.4rem;
+  padding-top: 0.8rem;
+  text-align: center;
+}
+
+.address-container,
+.officehours-container {
+  padding: 0.8rem 0;
+}
+
+.officehours-container p {
+  margin: 0;
+}
+
+.quicklinks-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer a {
+  color: var(--color-accent);
+}
+
+address {
+  font-style: normal;
+}
+
+/* Hero Section */
+.hero-container {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+
+.cta {
+  background: var(--color-accent);
+  color: var(--color-accent1);
+  padding: 1.2rem;
+  text-decoration: none;
+}
+
+.hero-image {
+  display: block;
+  height: auto;
+  margin: 3.2rem auto 0;
+  max-width: 100%;
 }
