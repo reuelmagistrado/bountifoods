@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Merriweather+Sans:wght@300;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
@@ -36,14 +36,46 @@
         </div>
     </div>
 
+    <main class="form">
+        <div class="form-container container">
+            <form action="" method="get">
+                <h1 class=".form-title">Drink Order Form</h1>
+                <label>
+                    <span class="label__text">First Name *</span>
+                    <input type="text" name="fullname" placeholder="John Doe" autocomplete="name" autofocus required>
+                </label>
+                <label>
+                    <span class="label__text">Email *</span>
+                    <input type="email" name="email" placeholder="youremail@domain.com" autocomplete="email" required>
+                </label>
+                <label>
+                    <span class="label__text">Contact Number</span>
+                    <input type="tel" name="contact">
+                </label>
+                <label>
+                    <span class="label__text">Special Instructions</span>
+                    <textarea name="message"></textarea>
+                </label>
+                <input type="submit" class="form__btn" value="Blend Drink">
+            </form>
+            <picture>
+                <source media="(min-width: 960px)" srcset="./images/form-pic-large.webp">
+                <source media="(min-width: 600px)" srcset="./images/form-pic-medium.webp">
+                <img class="form__image" src="./images/form-pic.webp" alt="Dragon Fruit Smoothie." width="508"
+                    height="507">
+            </picture>
+        </div>
+    </main>
+
     <div class="footer-section">
         <div class="container">
             <footer>
                 <div class="footer__logo-container">
                     <img src="./images/logo-removebg-preview.png" alt="" height="63" width="125">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nihil ratione molestiae minus
-                        facere assumenda cupiditate provident iure expedita laboriosam!
+                        The BountiFoods is dedicated to supporting a healthy community. We provide a wide selection
+                        of organic food and natural products, conduct our business in an ethical and respectful manner
+                        and donate to organizations in need.
                     </p>
                 </div>
                 <section class="footer_dept-container">
@@ -54,7 +86,7 @@
                             <div>CA 92008-1001, USA</div>
                         </address>
                         <address>info@bountifoods.com</address>
-                        <address>818 658 3818</address>
+                        <address>818-658-3818</address>
                     </div>
                     <div class="officehours-container">
                         <p>
@@ -78,7 +110,7 @@
                 </section>
                 <div class="base-footer">
                     <small class="date-modified">
-                        Bountifoods | Reuel&nbsp;Magistrado | WDD 230 Project | <a
+                        BountiFoods | Reuel&nbsp;Magistrado | WDD 230 Project | <a
                             href="./attributions.html">Attributions</a> |
                     </small>
                 </div>
