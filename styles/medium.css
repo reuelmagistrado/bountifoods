@@ -47,4 +47,16 @@
     align-self: center;
     margin-top: 0;
   }
+
+  /* Malibu */
+  .malibu-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    gap: 4rem;
+  }
+
+  .weather {
+    align-self: center;
+  }
 }

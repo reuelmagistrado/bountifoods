@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Merriweather+Sans:wght@300;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
@@ -36,20 +36,85 @@
         </div>
     </div>
 
-    <div class="container">
-        <main>
+    <main>
+        <div class="container">
             <section class="hero-container">
                 <div class="hero__text-container">
-                    <h1>GOOD FOOD, GOOD&nbsp;MOOD</h1>
+                    <h1>Good Food, Good&nbsp;Mood</h1>
                     <p>
                         The perfect fruit to cook with.
                     </p>
                     <a href="./fresh.html" class="cta">Mix My Drink</a>
                 </div>
-                <img class="hero-image" src="https://via.placeholder.com/750?text=placeholder"" alt=" Image Here">
+                <picture>
+                    <source media="(min-width: 960px)" srcset="./images/fruitdrink-large.webp">
+                    <source media="(min-width: 600px)" srcset="./images/fruitdrink-medium.webp">
+                    <img class="hero-image" src="./images/fruitdrink.webp" alt="Dragon Fruit Smoothie." width="510"
+                        height="510">
+                </picture>
             </section>
-        </main>
-    </div>
+        </div>
+        <div class="section-container">
+            <section class="supporting-text container">
+                <div>
+                    <h2>Choosing Good Just Got Easier.</h2>
+                    <p>
+                        Our beef, chicken and turkey are raised without antibiotics and never given added hormones. They
+                        are
+                        never fed animal byproducts. Our nitrate-free, uncured bacon comes from pigs that are never
+                        given
+                        any antibiotics or hormones and are vegetarian fed. We only use ingredients that we would serve
+                        our
+                        own families. We do the worrying – so you don’t have to.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="malibu-container container">
+            <section class="malibu-text container">
+                <div>
+                    <h2>Comes From Paradise.</h2>
+                    <p>
+                        <strong class="malibu-title">Malibu</strong> is well known as the home of some of the best
+                        beaches and surfing spots
+                        in the United
+                        States. A hub of celebrities, socialites and casual tourists, it is certainly a great
+                        destination for a relaxing vacation. However, beyond beaches and surfing, most people know very
+                        little about Malibu.
+                    </p>
+                </div>
+            </section>
+            <section class="weather container">
+                <div class="weather__container">
+                </div>
+                <hr>
+                <div class="weather__details"></div>
+            </section>
+        </div>
+
+        <div class="fruits-container">
+            <div class="fruits container">
+                <img class="fruits__images" src="https://via.placeholder.com/520?text=+" data-src="./images/food1.webp"
+                    alt="Citrus Fruits Slice." width="520" height="520">
+                <img class="fruits__images" src="https://via.placeholder.com/520?text=+" data-src="./images/food2.webp"
+                    alt="Assorted Foods." width="520" height="520">
+                <img class="fruits__images" src="https://via.placeholder.com/520?text=+" data-src="./images/food3.webp"
+                    alt="Baked Breads with Fruit Toppings." width="520" height="520">
+                <img class="fruits__images" src="https://via.placeholder.com/520?text=+" data-src="./images/food4.webp"
+                    alt="Round Fruit Donuts." width="520" height="520">
+                <img class="fruits__images" src="https://via.placeholder.com/520?text=+" data-src="./images/food5.webp"
+                    alt="Blueberries and Orange Slices." width="520" height="520">
+                <img class="fruits__images" src="https://via.placeholder.com/520?text=+" data-src="./images/food6.webp"
+                    alt="Fruit Salad with Youghurt in Plastic Jars on Chopping Board Beside Mango." width="520"
+                    height="520">
+
+            </div>
+        </div>
+
+        <p class="drinksDisplay container">Number of Drinks Made: <span class="drinks"></span></p>
+
+    </main>
 
     <div class="footer-section">
         <div class="container">
@@ -94,7 +159,7 @@
                 </section>
                 <div class="base-footer">
                     <small class="date-modified">
-                        Bountifoods | Reuel&nbsp;Magistrado | WDD 230 Project | <a
+                        BountiFoods | Reuel&nbsp;Magistrado | WDD 230 Project | <a
                             href="./attributions.html">Attributions</a> |
                     </small>
                 </div>
@@ -104,6 +169,10 @@
 
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/weather.js"></script>
+    <script src="./scripts/localStorage.js"></script>
+    <script src="./scripts/lazyLoad.js"></script>
+
 </body>
 
 </html>
