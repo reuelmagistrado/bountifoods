@@ -1,2 +1,5 @@
 @media screen and (min-width: 60em) {
+  .parallax {
+    background-image: url("../images/about-cover-large.webp");
+  }
 }

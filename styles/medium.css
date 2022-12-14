@@ -59,4 +59,9 @@
   .weather {
     align-self: center;
   }
+
+  /* About Page */
+  .parallax {
+    background-image: url("../images/about-cover-medium.webp");
+  }
 }

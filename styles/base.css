@@ -357,3 +357,26 @@ input:focus:invalid {
 form {
   justify-self: center;
 }
+
+/* About Page */
+.parallax {
+  /* The image used */
+  background-image: url("../images/about-cover-small.webp");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-container {
+  padding: 5.6rem 0;
+}
+
+.about__text {
+  max-width: 50ch;
+}
