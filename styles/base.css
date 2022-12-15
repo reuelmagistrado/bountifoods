@@ -302,18 +302,25 @@ address {
   margin: auto;
 }
 
+.form-title {
+  font-size: 2.887rem;
+  margin-bottom: 1.6rem;
+}
+
 .label__text {
   display: block;
 }
 
-input {
+input,
+select {
   margin-bottom: 1.6rem;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-textarea {
+textarea,
+select {
   border-radius: 0.8rem;
   border: 2px solid;
   outline: none;
@@ -323,25 +330,30 @@ textarea {
   max-width: 32rem;
 }
 
-input:optional {
+input:optional,
+:optional {
   border-color: var(--color-tertiary);
 }
 
-input:required:valid {
+input:required:valid,
+:required:valid {
   border-color: green;
 }
 
-input:required:focus:valid {
+input:required:focus:valid,
+:required:focus:valid {
   background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg")
     no-repeat 95% 50% lightgreen;
   background-size: 25px;
 }
 
-input:invalid {
+input:invalid,
+:invalid {
   border-color: red;
 }
 
-input:focus:invalid {
+input:focus:invalid,
+:focus:invalid {
   background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg")
     no-repeat 95% 50% lightsalmon;
   background-size: 25px;
@@ -357,6 +369,7 @@ input:focus:invalid {
   margin: 2.4rem 0;
   outline: none;
   padding: 1.6rem;
+  cursor: pointer;
 }
 
 .form__image {
@@ -455,4 +468,51 @@ form {
 .newsletter-email {
   margin-top: 1.6rem;
   margin-bottom: 0;
+}
+
+/* FRESH FRUITS MODAL */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.green-check {
+  background: green;
+  border-radius: 50%;
+}
+
+.confirmation-container {
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  text-align: end;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
