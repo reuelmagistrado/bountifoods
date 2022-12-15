@@ -28,3 +28,28 @@ function displayDateModified() {
 
 displayYear();
 displayDateModified();
+
+// Nav Scroll Effect
+
+const nav = document.querySelector(".nav-section");
+const heroSection = document.querySelector(".section-flag");
+
+const sectionOneOptions = {
+  rootMargin: "-650px 0px 0px 0px",
+};
+
+const sectionOneObserver = new IntersectionObserver(function (
+  entries,
+  sectionOneObserver
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      nav.classList.add("nav-scrolled");
+    } else {
+      nav.classList.remove("nav-scrolled");
+    }
+  });
+},
+sectionOneOptions);
+
+sectionOneObserver.observe(heroSection);

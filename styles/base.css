@@ -7,7 +7,7 @@
   --color-secondary: #e3f6f5;
   --color-tertiary: #bae8e8;
   --dark-shadow-clear: rgba(255, 255, 255, 0.5);
-  --dark-shadow: rgba(255, 255, 255, 0.2);
+  --dark-shadow: rgba(39, 35, 67, 1);
 }
 
 /* GENERAL */
@@ -75,7 +75,16 @@ small a {
 /* Navigation */
 .nav-section {
   /* background-color: #d4d8f0; */
-  border: 2px solid var(--color-accent1);
+  /* border: 2px solid var(--color-accent1); */
+  position: sticky;
+  /* top: 0; */
+  top: 0;
+  z-index: 1;
+  background: var(--color-primary);
+}
+
+.nav-scrolled {
+  box-shadow: 0 2px 4px 0 rgba(39, 35, 67, 0.2);
 }
 
 .topnav {
@@ -95,7 +104,7 @@ small a {
 .topnav button {
   color: var(--color-accent1);
   display: block;
-  font-size: 1.802rem;
+  font-size: 1.266rem;
   padding: 1.2rem 1.4rem;
   text-decoration: none;
 }
@@ -269,6 +278,22 @@ address {
 
 .fruits-container {
   padding: 5.6rem 0;
+}
+
+.drinksDisplay {
+  background: #eb102f;
+  color: var(--color-primary);
+  clip-path: polygon(
+    100% 0%,
+    calc(100% - 0.75rem) 50%,
+    100% 100%,
+    0 100%,
+    0% 50%,
+    0 0
+  );
+  letter-spacing: 0.03rem;
+  padding: 1rem 2rem 1rem 1rem;
+  width: fit-content;
 }
 
 /* Form Page */

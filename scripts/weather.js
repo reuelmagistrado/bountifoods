@@ -35,6 +35,13 @@ function displayResults(weatherData) {
     "Thursday",
     "Friday",
     "Saturday",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
   const tomorrow = document.createElement("p");
   const dayAfterTomorrow = document.createElement("p");
