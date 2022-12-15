@@ -355,11 +355,8 @@ input:focus:invalid {
   color: var(--color-accent1);
   font-weight: bold;
   margin: 2.4rem 0;
-
   outline: none;
   padding: 1.6rem;
-  /* width: 50%;
-  max-width: 32rem; */
 }
 
 .form__image {
@@ -409,4 +406,53 @@ form {
 /* Attributions Page */
 .attributions-container {
   padding: 5.6rem 0;
+}
+
+/* Newsletter */
+
+.newsletter__btn {
+  background: var(--color-accent);
+  border-radius: 1rem;
+  border: none;
+  color: var(--color-accent1);
+  font-weight: bold;
+  outline: none;
+  padding: 1.6rem;
+}
+
+.newsletter-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: var(--color-secondary);
+}
+
+.newsletter-container p {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+}
+
+.newsletter-container p,
+.newsletter-container input {
+  font-size: 1.266rem;
+}
+
+.newsletter-container input[type="submit"] {
+  letter-spacing: 0.3px;
+}
+
+.newsletter-container h3 {
+  font-size: 1.424rem;
+}
+
+.social-media svg {
+  margin-right: 1.6rem;
+}
+
+.newsletter-email {
+  margin-top: 1.6rem;
+  margin-bottom: 0;
 }
