@@ -10,6 +10,7 @@ async function apiFetchFruits() {
     if (response.ok) {
       const fruitsData = await response.json();
       setIngredients(fruitsData);
+      return fruitsData;
     } else {
       throw Error(await response.text());
     }
@@ -24,6 +25,7 @@ function setIngredients(fruitsData) {
     const option = document.createElement("option");
     option.setAttribute("value", fruit.name);
     option.textContent = fruit.name;
+
     fruit1.append(option);
   });
 
@@ -32,6 +34,7 @@ function setIngredients(fruitsData) {
     const option = document.createElement("option");
     option.setAttribute("value", fruit.name);
     option.textContent = fruit.name;
+
     fruit2.append(option);
   });
 
@@ -40,6 +43,7 @@ function setIngredients(fruitsData) {
     const option = document.createElement("option");
     option.setAttribute("value", fruit.name);
     option.textContent = fruit.name;
+
     fruit3.append(option);
   });
 }
@@ -76,10 +80,85 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+const date = new Date().toLocaleDateString();
+const modalDate = document.querySelector(".date");
+const modalName = document.querySelector(".name");
+const modalEmail = document.querySelector(".email");
+
+const fruitsList = await apiFetchFruits();
+
+const modalFruit1 = document.querySelector(".fruit1");
+const modalFruit2 = document.querySelector(".fruit2");
+const modalFruit3 = document.querySelector(".fruit3");
+
+const modalCarbs = document.querySelector(".carbs");
+const modalProtein = document.querySelector(".protein");
+const modalFat = document.querySelector(".fat");
+const modalCalories = document.querySelector(".calories");
+const modalSugar = document.querySelector(".sugar");
+
+modalDate.append(date);
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   drinksCounter();
+  const formName = document.querySelector("[name='fullname']").value;
+  const formEmail = document.querySelector("[name='email']").value;
+
+  const formFruit1 = document.querySelector("[name='fruit1']").value;
+  const formFruit2 = document.querySelector("[name='fruit2']").value;
+  const formFruit3 = document.querySelector("[name='fruit3']").value;
+  const formInstructions = document.querySelector("[name='message']").value;
+
+  const fruit1 = fruitsList.find(({ name }) => name === formFruit1);
+  const fruit2 = fruitsList.find(({ name }) => name === formFruit2);
+  const fruit3 = fruitsList.find(({ name }) => name === formFruit3);
+
+  const totalCarbs =
+    fruit1.nutritions.carbohydrates +
+    fruit2.nutritions.carbohydrates +
+    fruit3.nutritions.carbohydrates;
+
+  const totalProtein =
+    fruit1.nutritions.protein +
+    fruit2.nutritions.protein +
+    fruit3.nutritions.protein;
+
+  const totalFat =
+    fruit1.nutritions.fat + fruit2.nutritions.fat + fruit3.nutritions.fat;
+
+  const totalCalories =
+    fruit1.nutritions.calories +
+    fruit2.nutritions.calories +
+    fruit3.nutritions.calories;
+
+  const totalSugar =
+    fruit1.nutritions.sugar + fruit2.nutritions.sugar + fruit3.nutritions.sugar;
+
+  modalName.append(formName);
+  modalEmail.append(formEmail);
+
+  const contactNum = document.querySelector("[name='contact']").value;
+  if (contactNum) {
+    const phone = `<p class="contact-number">Contact Number: ${contactNum}</p>`;
+    modalEmail.insertAdjacentHTML("afterend", phone);
+  }
+
+  modalFruit1.append(formFruit1);
+  modalFruit2.append(formFruit2);
+  modalFruit3.append(formFruit3);
+
+  modalCarbs.append(Math.round(totalCarbs));
+  modalProtein.append(Math.round(totalProtein));
+  modalFat.append(Math.round(totalFat));
+  modalCalories.append(Math.round(totalCalories));
+  modalSugar.append(Math.round(totalSugar));
+
+  if (formInstructions) {
+    const specialInstructions = `<p class="special-instructions">Special Instructions: ${formInstructions}</p>`;
+    modalFruit3.insertAdjacentHTML("afterend", specialInstructions);
+  }
+
   openModal();
 });
