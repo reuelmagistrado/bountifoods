@@ -53,3 +53,5 @@ const sectionOneObserver = new IntersectionObserver(function (
 sectionOneOptions);
 
 sectionOneObserver.observe(heroSection);
+
+// Display Drinks

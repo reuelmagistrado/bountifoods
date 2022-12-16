@@ -1,4 +1,6 @@
 // three (3) select inputs that are populated with the available fruit to put into a drink. Available fruit options must only come from this JSON data source: FRUIT Links to an external site. for full credit consideration.
+import { drinksCounter } from "./localStorage.js";
+
 const queryUrl = "https://brotherblazzard.github.io/canvas-content/fruit.json";
 
 async function apiFetchFruits() {
@@ -78,7 +80,6 @@ window.onclick = function (event) {
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
+  drinksCounter();
   openModal();
 });
-// openModal();

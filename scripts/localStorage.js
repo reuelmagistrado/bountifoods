@@ -2,11 +2,13 @@ const drinksDisplay = document.querySelector(".drinks");
 let numDrinks = Number(window.localStorage.getItem("drinks-ls"));
 
 function displayDrinks() {
-  if (numDrinks !== 0) {
+  if (drinksDisplay) {
     drinksDisplay.textContent = numDrinks;
-  } else {
-    drinksDisplay.textContent = `0`;
   }
+}
+
+export function drinksCounter() {
+  let numDrinks = Number(window.localStorage.getItem("drinks-ls"));
 
   numDrinks++;
   localStorage.setItem("drinks-ls", numDrinks);
