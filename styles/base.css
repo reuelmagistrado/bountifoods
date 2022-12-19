@@ -407,6 +407,7 @@ form {
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 0 0 50% 50%;
 }
 
 .parallax h1 {
@@ -420,7 +421,7 @@ form {
 
 .about-container,
 .mission {
-  padding: 5.6rem;
+  padding-top: 5.6rem;
 }
 
 .about__text {
@@ -553,9 +554,4 @@ form {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-#map {
-  height: 400px; /* The height is 400 pixels */
-  width: 100%; /* The width is the width of the web page */
 }
