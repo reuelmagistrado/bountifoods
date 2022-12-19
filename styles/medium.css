@@ -62,6 +62,7 @@
 
   /* About Page */
   .parallax {
-    background-image: url("../images/about-cover-medium.webp");
+    background-image: linear-gradient(rgba(0 0 0 / 20%), rgba(0 0 0 / 20%)),
+      url("../images/about-cover-medium.webp");
   }
 }

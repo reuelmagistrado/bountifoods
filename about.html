@@ -36,26 +36,41 @@
         </div>
     </div>
 
-    <main>
-        <div class="parallax section-flag"></div>
+    <header class="parallax section-flag">
+        <h1 class="container">Bringing the farm to your table.</h1>
+    </header>
 
-        <section class="about-container container">
-            <h1>About BountiFoods</h1>
-            <p class="about__text">
-                We have been Carlsbad's go-to destination for locally produced, organic, and bulk goods ever since we
-                opened our doors more than four decades ago as Mr. Natural's Bountiful Food Store. Our name has been
-                shortened recently. Additionally, the store is quite a bit larger. But we will continue to work toward
-                the same goal.
+    <main>
+        <section class="mission container">
+            <h2 class="about__title">Our Mission</h2>
+            <p>
+                We are dedicated to sustainability and use eco-friendly packaging for all of our products. We are also
+                proud to support our local community and give back through various charitable initiatives.
             </p>
-            <p class="about__text">
+            <p>
                 We are committed to promoting a healthy environment throughout the community. In addition to supplying a
                 comprehensive range of organic foods and natural items, we also run our company in an honest and
                 considerate manner, and we make charitable contributions to non-profit organizations that are struggling
                 to make ends meet.
             </p>
         </section>
+        <section class="about-container container">
+            <h2 class="about__title">Our Story</h2>
+            <p>
+                We are a family-owned business that has been operating for over 10 years. Our passion for fresh, natural
+                ingredients shines through in every bottle of juice we produce.
+            </p>
+            <p>
+                We have been Carlsbad's go-to destination for locally produced, organic, and bulk goods ever since we
+                opened our doors more than four decades ago as Mr. Natural's Bountiful Food Store. Our name has been
+                shortened recently. Additionally, the store is quite a bit larger. But we will continue to work toward
+                the same goal.
+            </p>
+        </section>
 
     </main>
+
+    <div id="map"></div>
 
     <div class="footer-section">
         <div class="container">
@@ -63,7 +78,7 @@
                 <div class="footer__logo-container">
                     <img src="./images/logo-removebg-preview.png" alt="" height="63" width="125">
                     <p>
-                        The BountiFoods is dedicated to supporting a healthy community. We provide a wide selection
+                        The BOUNTIFUL is dedicated to supporting a healthy community. We provide a wide selection
                         of organic food and natural products, conduct our business in an ethical and respectful manner
                         and donate to organizations in need.
                     </p>
@@ -75,7 +90,7 @@
                             <div>1701 Butters Rd, Carlsbad</div>
                             <div>CA 92008-1001, USA</div>
                         </address>
-                        <address>info@bountifoods.com</address>
+                        <address>info@bountiful.com</address>
                         <address>818-658-3818</address>
                     </div>
                     <div class="officehours-container">
@@ -101,7 +116,7 @@
                 </section>
                 <div class="base-footer">
                     <small class="date-modified">
-                        BountiFoods | Reuel&nbsp;Magistrado | WDD 230 Project | <a
+                        BOUNTIFUL | Reuel&nbsp;Magistrado | WDD 230 Project | <a
                             href="./attributions.html">Attributions</a> |
                     </small>
                 </div>
@@ -111,6 +126,10 @@
 
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/map.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtfU3U1ku4qyYrh8vGbzKvjvdF1662sXQ&callback=initMap&v=weekly"
+        defer></script>
 </body>
 
 </html>
