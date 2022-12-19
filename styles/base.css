@@ -100,7 +100,7 @@ small a {
   display: block;
 }
 
-.topnav a,
+.topnav .navItem,
 .topnav button {
   color: var(--color-accent1);
   display: block;
@@ -440,6 +440,7 @@ form {
   border-radius: 1rem;
   border: none;
   color: var(--color-accent1);
+  cursor: pointer;
   font-weight: bold;
   outline: none;
   padding: 1.6rem;
